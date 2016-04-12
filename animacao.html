@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<title>
+			Loop de Animação de Sprites
+		</title>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js">
+        </script>
+        <script src='animacao.js'></script>
+        <script src='bola.js'></script>
+	</head>
+
+	<body>
+		<canvas id="meu_canvas" width="500" height="500"></canvas>
+
+		<script>
+            // Canvas e Contexto
+			var canvas = document.getElementById('meu_canvas');
+			var context = canvas.getContext('2d');
+
+            var b1 = new Bola(context);
+            b1.x = 100;
+            b1.y = 200;
+            b1.speedX = 20;
+            b1.speedY = -10;
+            b1.color = 'red';
+            b1.ray = 20;
+
+            var b2 = new Bola(context);
+            b2.x = 200;
+            b2.y = 100;
+            b2.speedX = -10;
+            b2.speedY = 20;
+            b2.color = 'blue';
+            b2.ray = 30;
+
+            var animacao = new Animacao(context);
+            animacao.newSprite(b1);
+            animacao.newSprite(b2);
+
+            animacao.start();
+		</script>
+	</body>
+</html>
+

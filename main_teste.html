@@ -2,22 +2,19 @@
 <html>
 	<head>
 		<title>
-			Processando o Canvas na seção Head	
+			Jogo em HTML 5
 		</title>
 
-		<script>
-			window.onload() = function () {
-				// Aqui trabalharemos com o Convas
-			}
-		</script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js">
+        </script>
 	</head>
-	
+
 	<body>
-		<canvas id="meu_canvas" width="200" height="200"></canvas>
+		<canvas id="meu_canvas" width="500" height="500"></canvas>
 
 		<script>
+            // Canvas e Contexto
 			var canvas = document.getElementById('meu_canvas');
-			
 			var context = canvas.getContext('2d');
 		</script>
 	</body>
